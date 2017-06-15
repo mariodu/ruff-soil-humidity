@@ -1,0 +1,10 @@
+{
+  "models": [
+    "YL-69"
+  ],
+  "inputs": {
+    "adc": {
+      "type": "adc"
+    }
+  }
+}
