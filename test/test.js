@@ -30,22 +30,6 @@ module.exports = {
         done();
       });
     });
-  },
-
-  'test gpio change': function(done) {
-    driverRunner.run(driverPath, function(error, context) {
-      var inputs = context.inputs;
-      var device = context.device;
-      var gpio = inputs['gpio-in'];
-      var value = Math.random();
-
-      device.on('change', function(data) {
-        assert.equal(data, value);
-        done();
-      });
-
-      gpio.emit('interrupt', value);
-    });
   }
 };
 
